@@ -7,6 +7,10 @@
 * [Lesson 3 Notes](http://forums.fast.ai/t/deeplearning-lecnotes3/7866) Tim Lee
 * [Lesson 4 Notes](http://forums.fast.ai/t/deeplearning-lec4notes/8146) Tim Lee
 
+## Blog Sites by Author
+- [Anand Saha](http://teleported.in/)
+- [Apil Tamang](https://medium.com/@apiltamang)
+
 
 ## Blogs Written by (or recommended by) fastai Fellows 
 
@@ -64,14 +68,20 @@
 
 * [A systematic study of the class imbalance problem
 in convolutional neural networks](https://arxiv.org/pdf/1710.05381.pdf)
-* [Visualizing and Understanding Convolutional Networks](http://www.matthewzeiler.com/wp-content/uploads/2017/07/arxive2013.pdf) Zeiler & Fergus, 2013
 * [What’s your ML Test Score? A rubric for ML
 production systems](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45742.pdf)  (NIPS 2016)  
 * [ADAM:  A Method for Stochastic Optimization](https://arxiv.org/pdf/1412.6980.pdf) (ICLR 2015)
+* [A disciplined approach to neural network hyper-parameters: Part 1 -- learning rate, batch size, momentum, and weight decay](https://arxiv.org/abs/1803.09820) Leslie Smith, March 2018
 * [Cyclical Learning Rates for Training Neural Networks](https://arxiv.org/abs/1506.01186) (WACV 2017) Leslie Smith
 * [Fixing Weight Decay Regularization in Adam](https://arxiv.org/abs/1711.05101) Ilya Loshchilov, Frank Hutter (Submitted on 14 Nov 2017)
 * [Learning Distributed Representations of Concepts](http://www.cs.toronto.edu/~hinton/absps/families.pdf) Geoffrey Hinton, 1986
 * [Using the Output Embedding to Improve Language Models](https://arxiv.org/abs/1608.05859)
+
+### Key Research Papers
+* [A disciplined approach to neural network hyper-parameters: Part 1 -- learning rate, batch size, momentum, and weight decay](https://arxiv.org/abs/1803.09820), Leslie N. Smith, 2018
+* [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf) Kaiming He, ILSVRC 2015 classification task winner
+* [Visualizing and Understanding Convolutional Networks](http://www.matthewzeiler.com/wp-content/uploads/2017/07/arxive2013.pdf) Zeiler & Fergus, 2013
+
 
 ## Videos
 

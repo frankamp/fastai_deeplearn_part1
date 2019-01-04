@@ -19,7 +19,7 @@ ImageNet is carefully curated so that photo has one main item in it
 
 
 ## Architectures: Winners of ImageNet
-
+- **SENet**, 2017 (Squeeze-and-Excitation Networks)
 - **ResNet**, 2016 (Microsoft)
 - **GoogLeNet**, 2015, Inception module
 - **VGG Net**, 2014 (Oxford Univ group)
@@ -29,6 +29,12 @@ ImageNet is carefully curated so that photo has one main item in it
   - Excellent for the problems that differ (like satellite imagery vs simple photos)
 - **ZF Net**, 2013 (Matthew Zeiler and Rob Fergus from NYU)
 - **AlexNet**, 2012 (Stanford)
+
+## Pre-trained Models
+- source:  https://pytorch.org/docs/stable/torchvision/models.html
+
+![ImageNet](../images/pretrained_networks.png)
+
 
 ## Reference
 [The 9 Deep Learning Papers You Need To Know About (Understanding CNNs Part 3)](https://adeshpande3.github.io/adeshpande3.github.io/The-9-Deep-Learning-Papers-You-Need-To-Know-About.html) 

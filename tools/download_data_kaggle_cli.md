@@ -89,6 +89,8 @@ train.zip 100% |################################################################
 ```
 
 ### Download Kaggle Data (another way)
+Note:  sometimes setting up the configuration results in an error the next time you try to download another competition.  You may want to bypass configuration and directly include your user ID, password and competition name in one command line.
+
 ```bash
 kg download -u 'reshamashaikh' -p 'xxx' -c statoil-iceberg-classifier-challenge
 ```
@@ -108,6 +110,23 @@ ubuntu@ip-10-0-0-13:~/data$
 
 ### Step 6:  Unzip Files
 Note 1:  You will need to install and use `unzip` to unzip files.
+
+For Window users:
+1. First Download ubuntu from Window Microsoft Store
+
+2. Open PowerShell as Administrator and run:`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+
+3. Once the download has completed, select "Launch".This will open a console window. Wait for installation to complete then you will be prompted to create your LINUX user account.
+
+4. Create your LINUX username and password.
+
+5. Go to Control Panel and Turn on Developer Mode .
+
+6. Run `bash` from command-prompt. After that you can follow same as Linux users guide.
+
+
+For Linux Users:
+
 
 <kbd> sudo apt install unzip </kbd>  
 <kbd> unzip train.zip </kbd>  
@@ -165,3 +184,8 @@ Advice 2:  Do all of your work on sample data
 > ls sample/valid/cats | wc -l
 4
 ```
+---
+## Kaggle API
+Another option is to use the Kaggle API
+https://github.com/Kaggle/kaggle-api
+

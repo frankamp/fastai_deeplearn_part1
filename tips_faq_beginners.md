@@ -5,7 +5,7 @@
 
 - Make sure you enclose your code in triple back ticks.  Example:  
 
->use this code - notice the 3 " ` " enclosing the code block:  
+>use this code - notice the 3 ` enclosing the code block:  
 
 ![triple_backticks](images/triple_backticks.png)
 
@@ -36,7 +36,7 @@ OSError: [Errno 12] Cannot allocate memory
 
 :red_circle: **NOTE:** Do NOT put your Jupyter Notebook under the `/data/` directory!  Here's [the link](http://forums.fast.ai/t/how-to-remove-ipynb-checkpoint/8532/2) for why.
 
-### Option 1 (default):  under /courses
+### Option 1 (default):  under `/courses`
 The default location is under the `dl1` folder, wherever you've cloned the repo on your GPU machine.
 >my example
 ```bash
@@ -62,7 +62,9 @@ export PYTHONPATH=$PYTHONPATH:~/fastai
 
 ### Option 3:  used `pip install`
 Note that if you did `pip install`, you don't need to specify the path (as in option 2, or you don't need to put in the courses folder, as in option 1).  
-However, fastai is still being updated so there is a delay in library being available in pip
+However, fastai is still being updated so there is a delay in library being available directly via pip.  
+Can try:  
+`pip install https://github.com/fastai/fastai/archive/master.zip`
 
 ---
 ## Q3:  What does my directory structure look like?
@@ -113,19 +115,19 @@ PATH = "/home/ubuntu/data/dogscats/"
 # print number of files in each folder
 
 print("training data: cats")
-!ls -l {PATH}train/cats | grep ^[^d] | wc -l
+!ls -l {PATH}train/cats | grep ^[^dt] | wc -l
 
 print("training data: dogs")
-!ls -l {PATH}train/dogs | grep ^[^d] | wc -l
+!ls -l {PATH}train/dogs | grep ^[^dt] | wc -l
 
 print("validation data: cats")
-!ls -l {PATH}valid/cats | grep ^[^d] | wc -l
+!ls -l {PATH}valid/cats | grep ^[^dt] | wc -l
 
 print("validation data: dogs")
-!ls -l {PATH}valid/dogs | grep ^[^d] | wc -l
+!ls -l {PATH}valid/dogs | grep ^[^dt] | wc -l
 
 print("test data")
-!ls -l {PATH}test1 | grep ^[^d] | wc -l
+!ls -l {PATH}test1 | grep ^[^dt] | wc -l
 ```
 >my output
 ```bash
@@ -155,12 +157,12 @@ test data
 It's important to understand that:  
 - in the case of train/test, the test set is used to test for **generalization**
 - the **holdout data** is a second test set
-    
+
 ---
 ## Q5:  How do I copy files or data from my local computer to a cloud machine (Paperspace, AWS, etc)?
 
-[instructions on using `scp` command to transfer files from platforms](
-https://github.com/reshamas/fastai_deeplearn_part1/blob/master/tools/scp_xfer_files_local_to_aws.md)
- 
+[Instructions on using `scp` command to transfer files from platforms](https://github.com/reshamas/fastai_deeplearn_part1/blob/master/tools/copy_files_local_to_cloud.md)
 
-
+---
+## Q6:  Where do I put my sample images?
+[testing sample images after the model has been created](http://forums.fast.ai/t/wiki-lesson-1/9398/282)

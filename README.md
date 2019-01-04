@@ -1,37 +1,79 @@
 # [fast.ai](http://www.fast.ai)
-Deep Learning (Part 1 v2):  **Oct - Dec 2017**  
+- [fastai Documentation](http://docs.fast.ai) :red_circle:
+    - [Documentation for Developers](http://docs-dev.fast.ai)
+- fastai on **GitHub**
+    - [fastai](https://github.com/fastai/fastai) (* current version *) :red_circle:
+        - [fastai v1: Launch Announcement](http://www.fast.ai/2018/10/02/fastai-ai/)
+        - [fastai_old (on GitHub)](https://github.com/fastai/fastai_old) (old version)
+- Data
+    - [fastai Datasets](http://course.fast.ai/datasets) :red_circle:
+    - [Torrents](http://academictorrents.com/browse.php?search=fastai&page=0)
+    - [some fastai files](http://files.fast.ai) (files, models, data)
+
+## About Me 
+* [My Blog](https://reshamas.github.io) (Reshama Shaikh)
+* Twitter: [@reshamas](https://twitter.com/reshamas)
 
 ---
-## About
 
-### Contact Info
+# Deep Learning:  Version 3 :red_circle:
 
-Reshama Shaikh blog: https://reshamas.github.io   
-I am on Twitter:  https://twitter.com/reshamas
+## Course Info
+- [Version 3](fastai_dl_course_v3.md) (Fall 2018 to Spring 2019):  
+    - Jeremy:  Blog posts are welcome and recommended, but they mustn’t include the video until after the MOOC is released next year. Therefore, the blog posts need to stand alone and be useful without the video.
+
+
+## Platforms for Using Fastai (GPU required) v3
+*  [Setup (Local, AWS) and FAQ Part 1 v3](https://forums.fast.ai/t/setup-local-aws-and-faq/25298)
+
+## Helpful Resources
+- [Jeremy's PyTorch Tutorial](https://github.com/fastai/fastai_old/blob/master/dev_nb/001a_nn_basics.ipynb) 
+
 
 ---
+## Courses (my outlines)
 
-## Course Links
-* [GitHub: fastai](https://github.com/fastai/fastai)
-* [Discourse:  part1-v2](http://forums.fast.ai/c/part1-v2)
-* [Discourse:  part1-v2 beginner](http://forums.fast.ai/c/part1v2-beg)
-* [some fastai files](http://files.fast.ai)
+### Deep Learning
+- [Version 2](fastai_dl_course_v2.md) (Fall 2017 to Spring 2018)
+- [Version 1](fastai_dl_course_v1.md) (Fall 2016 to Spring 2017)  
+
+### Machine Learning
+- [Fall 2017](fastai_ml_course.md)
+
+---
 
 ## Helpful Resources
 * [Directory of fastai and DL terms](fastai_dl_terms.md)
 * [Solving the Most Common Errors](tips_troubleshooting.md)
 * [Fastai FAQs for Beginners](tips_faq_beginners.md)
-* :red_circle: [Resources](resources.md) (Blogs Written by fastai Fellows / Research Papers, etc)
-  - [Fastai Blog Posts (by Rachel Thomas & Jeremy Howard)](http://www.fast.ai/topics/)
+* [30+ Best Practices](http://forums.fast.ai/t/30-best-practices/12344)
+* [Resources](resources.md) (Blogs Written by fastai Fellows / Research Papers, etc)
+* [Fastai Blog Posts](http://www.fast.ai/topics/) (by Rachel Thomas & Jeremy Howard)
+    - podcast with [Jeremy Howard on fastai_v1](https://twimlai.com/twiml-talk-186-the-fastai-v1-deep-learning-framework-with-jeremy-howard/) :red_circle:
+    - podcast with [Rachel Thomas](https://twimlai.com/twiml-talk-138-practical-deep-learning-with-rachel-thomas/)
 
-## Platforms for Using fastai (GPU required)
+
+## [Technical Tools](tools/)
+* [tmux on AWS](tools/tmux.md)
+* [Download data using Kaggle CLI](tools/download_data_kaggle_cli.md)
+* [Download data using Chrome and wget](tools/download_data_browser_curlwget.md)
+* [Jupyter Notebook Commands & Shortcuts](tools/jupyter_notebook.md)
+* [How to Create a Keypair](tools/create_keypair.md)
+* [Copy Files from Local PC to Cloud PC](tools/copy_files_local_to_cloud.md)
+
+## Platforms for Using fastai (GPU required) v2
+[Summary of Cloud GPU Vendors (with billing)](https://github.com/binga/cloud-gpus)
 * [Paperspace setup](tools/paperspace.md)
 * [AWS AMI GPU Setup](tools/aws_ami_gpu_setup.md)  
+    - [How to setup fastai in an Amazon AWS region without fastai AMI like in Europe](https://medium.com/@pierre_guillou/guide-install-fastai-in-any-aws-region-8f4fe29132e5)
 * [Crestle](tools/crestle_run.md)
 * [Google Cloud GPU Setup for fastai](https://medium.com/google-cloud/set-up-google-cloud-gpu-for-fast-ai-45a77fa0cb48)
-* [Paperspace Docker Container](https://hub.docker.com/r/paperspace/fastai/)
 * [Set up personal deep learning box (home computer)](tools/setup_personal_dl_box.md)
 * [Microsoft Azure](https://medium.com/@manikantayadunanda/setting-up-deeplearning-machine-and-fast-ai-on-azure-a22eb6bd6429)
+* [Running fast.ai notebooks with Amazon SageMaker](https://aws.amazon.com/blogs/machine-learning/running-fast-ai-notebooks-with-amazon-sagemaker/)
+* Docker
+    - [Paperspace Docker Container](https://hub.docker.com/r/paperspace/fastai/)
+    - [Fastai and Docker](https://nji-syd.github.io/2018/03/26/up-and-running-with-fast-ai-and-docker/)
 * [manual: bash script for setup](http://files.fast.ai/setup/paperspace)
   - the CUDA drivers
   - Anaconda (special Python distribution)
@@ -41,53 +83,15 @@ I am on Twitter:  https://twitter.com/reshamas
   - data  
 * Other
   - [FloydHub](https://www.floydhub.com)
+    - https://github.com/YuelongGuo/floydhub.fast.ai
   - [Google Colaboratory](https://colab.research.google.com/notebook#fileId=/v2/external/notebooks/welcome.ipynb)
+  - [Salamander](http://forums.fast.ai/t/setup-on-salamander-cheaper-easier-than-aws/25427)
+
+## Other Resources
+- [Publish notebooks as Github gists with a single button click!](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/gist_it/readme.html)
+- [Tips for building large image datasets](https://forums.fast.ai/t/tips-for-building-large-image-datasets/26688)
 
 
-## [Technical Tools](tools/)
-* [tmux on AWS](tools/tmux.md)
-* [Download data using Kaggle CLI](tools/download_data_kaggle_cli.md)
-* [Download data using Chrome and wget](tools/download_data_browser_curlwget.md)
-* [Jupyter Notebook Commands & Shortcuts](tools/jupyter_notebook.md)
-* [How to Create a Keypair](tools/create_keypair.md)
 
----
-## Course Info
 
-### Deep Learning Wiki
-* http://forums.fast.ai/t/welcome-to-part-1-v2/5787
-* http://forums.fast.ai/t/another-treat-early-access-to-intro-to-machine-learning-videos/6826
-* Latest coursework
-  * **Version 2:**  [Part 1 v2](http://course.fast.ai) (released Jan 2018)
-  * Version 2:  [Part 2 v2]    (will be released ~ Jul 2018)
-* Older coursework
-  * Version 1:  [Part 1 v1](http://course17.fast.ai)
-  * Version 1:  [Part 2 v1](http://course17.fast.ai/part2.html)
 
-### Deep Learning Lesson Timelines
-* http://forums.fast.ai/t/part-1-v2-complete-collection-of-video-timelines/11183
-
-### [Deep Learning 1: My Lesson Notes](courses/dl1/) 
-* Lesson 1
-  - [Lesson 1a: Course Intro](courses/dl1/lesson_1a_course_intro.md)
-  - [Lesson 1b: CNN and resnet Architecture](courses/dl1/lesson_1b_cnn_tools.md)
-* [Lesson 2: resnet34, resnext50](courses/dl1/lesson_2_resnet34_resnext50.md)
-* [Lesson 3: CNN Image Intro](courses/dl1/lesson_3_x.md)
-* [Lesson 4: Structured Neural Net Intro, Language RNN Intro, Collaborative Filtering Intro](courses/dl1/lesson_4_x.md)
-* [Lesson 5:  ](courses/dl1/lesson_5_x.md)
-* [Lesson 6:  ](courses/dl1/lesson_6_x.md)
-* [Lesson 7:  ](courses/dl1/lesson_7_x.md)
-
-### [Intro to Machine Learning: My Lesson Notes](courses/ml1/) 
-* [Lesson 1: Random Forests Part 1](courses/ml1/lesson_01.md)
-* [Lesson 2: Random Forests Part 2](courses/ml1/lesson_02.md)
-* [Lesson 3: Preprocessing Data](courses/ml1/lesson_03.md)
-* [Lesson 4: RF Hyperparameters & Feature Importance](courses/ml1/lesson_04.md)
-* [Lesson 5:  ] (courses/ml1/)
-* [Lesson 6:  ] (courses/ml1/)
-* [Lesson 7:  ] (courses/ml1/)
-* [Lesson 8:  ] (courses/ml1/)
-* [Lesson 9:  ] (courses/ml1/)
-* [Lesson 10:  ] (courses/ml1/)
-* [Lesson 11:  ] (courses/ml1/)
-* [Lesson 12:  ] (courses/ml1/)

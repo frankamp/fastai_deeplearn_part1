@@ -1,7 +1,7 @@
 # Lesson 4: RF Hyperparameters & Feature Importance
 
 Length: 01:40  
-
+Video:  [Lesson 4](https://www.youtube.com/watch?v=0v93qHDqq_g&feature=youtu.be)  
 Notebook:  [lesson2-rf_interpretation.ipynb](https://github.com/fastai/fastai/blob/master/courses/ml1/lesson2-rf_interpretation.ipynb)  
 
 ---
@@ -127,6 +127,7 @@ Notebook:  [lesson2-rf_interpretation.ipynb](https://github.com/fastai/fastai/bl
   - look at every pair of objects and see which are closest.  remove 2 points and replace with their mean.
   - keep doing that; we'll gradually reduce the number of points by pairwise combining
 - can use rank corrrelation to identify similar features  (function must be monotonic for rank correlation to work)
+- set `set_rf_samples=50000` to run things quickly
 
 ## Partial Dependence
 1:07:30  
@@ -141,7 +142,61 @@ from plotnine import *
 - replacing whole column with constant.., 1961
 - plot all 500 predictions
 
-## Tree Interpreter
-- Contributions:  
+### Plot year made vs sale elapsed
+- note that year made = 1000 ---> go to client, they tell us that "1000" is for when we don't know the year of the make
+- in order to understand the plot better, remove the items that were made before 1930
+- next, let's look at the relationship between year made and sale price
+
+### ggplot
+- there's a great package called ggplot
+- it was originally in the R package
+- "gg" = **Grammar of Graphics**
+- powerful way of producing plots in a flexible way
+- can pip install, already part of fastai environment
+- similar Python API as in R (though R has better documentation)
+- when you do plots, most datasets you will use will be too big
+  - there are so many points, it will take forever, and may look like a big mess
+- that's why Jeremy uses `get_sample` first:
+  - this grabs 500 data points, using a random sample
+  - `aes` = aesthetic (way to set up columns in ggplot)
+- in ggplot `+` adds chart elements
+  - add a smoother
+  - a smoother creates a little linear regression for a subset of the graph, and then joins them 
+  - this allows us to see a nice smooth curve
+- this is the main way Jeremy looks at univariate relationships
+- by adding `se=True`, it also shows the confidence interval of the smoother
+```python
+x_all = get_sample(df_raw[df_raw.YearMade>1930], 500)
+ggplot(x_all, aes('YearMade', 'SalePrice')) + stat_smooth(se=True, method='loess')
+```
+### ggplot - interpretation
+- upon looking at the graph, it's all over the place
+- Jeremy would have expected that trucks sold more recently would be more expensive because of inflation and newer models
+- when you look at a linear relationship like this, there are a lot of interactions 
+- for example, why did the price drop between 1991 and 1997?
+  - are they less valuable?
+  - was there a recession then?
+  - or maybe people at that time were buying vehicles that were less expensive?
+`1:14:07`  
+- as data scientists working at a company, people will come to you with univariate charts: "what happened / why?"
+  - most times, there is something else going on
+- ask this Q: what's the relationship between sale price and year made, all other things being equal?
+  - "all other things being equal" means if we sold something in 1980 vs 1990, it was exact same thing, to the exact same person, with exactly the same options, etc., what would be the difference in price? ---> use Partial Dependency
+  
+### Partial Dependence Plot (`01:15`)
+- nice library that is not well-known called `pdp` --> `pip install pdpbox` --> https://github.com/SauceCat/PDPbox
+- we have our sample dataset of 500 data points
+- we will do something very interesting:  
+  - using our data 500 x num_covariates
+  - in the column year_made, we will copy in the value "1960", for all 500 rows
+  - then, we will take take this data and pass to our random forest, to predict the **sale price**
+  - that will tell us, that for everything that was auctioned, how much do we think it would have been sold for, if that item was made in 1960?
+  - we will plot that (year=1960 by selling price), for each of the years
+  - we will run the model again, by setting each year now to 1961, etc.
+  - Q from student: to be clear, we have already fit the random forest and then we pass in new year and see what the price will be?
+  - A from JH:  Yes, this is a lot like how we did random forest, but rather than randomly shuffling the column, we replace the column with a constant value
+  - randomly shuffling a column tells us how accurate it is when you don't use that column anymore
+  - replacing the entire column with a constant tells us, or estimates for us, how much we would have sold that product for on that auction, on that day, in 1961
+  - 
 
 
